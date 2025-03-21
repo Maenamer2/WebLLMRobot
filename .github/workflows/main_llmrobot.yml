@@ -69,3 +69,4 @@ jobs:
           app-name: 'LLMrobot'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_411AD34707AD410ABB127E970F21F4E5 }}
+          startup-command: 'gunicorn --bind=0.0.0.0 --timeout 600 webllm5:app'
